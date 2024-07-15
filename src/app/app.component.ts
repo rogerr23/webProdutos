@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { error } from 'console';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,
+  imports: [
+    RouterLink,
+    RouterOutlet,
     CommonModule
   ],
   templateUrl: './app.component.html',
@@ -15,6 +17,7 @@ import { error } from 'console';
 })
 export class AppComponent implements OnInit {
 
+  // Atributos
   produtos: any[] = [];
 
   //Declarando um objeto HttpClient

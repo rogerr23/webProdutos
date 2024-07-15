@@ -1,50 +1,30 @@
-<div class="container mt-3">
-  <div class="card">
-    <div class="card-body">
+<nav class="navbar navbar-expand-lg navbar-custom ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sistema de controle de produtos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span close="navbar-toggler-icon"></span>
+    </button>
 
-      <h3>Controle de Produtos</h3>
-      <p>Listagem de produtos cadastrados.</p>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/cadastrar-produtos">
+            Cadastrar Produtos</a>
+        </li>
+        <li class="nava-item">
+          <a class="nav-link active" aria-current="page" routerLink="/consultar-produtos">
+            Consultar Produtos</a>
+        </li>
+      </ul>
 
-      <div class="table-responsive">
-        <table class="table table-sm table-hover table-striped">
-          <thead>
-            <tr>
-              <th>Nome do Produto</th>
-              <th>Preço</th>
-              <th>Quantidade</th>
-              <th>Operações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let p of produtos">
-              <td>{{p.nome}}</td>
-              <td>{{p.preco}}</td>
-              <td>{{p.quantidade}}</td>
-              <td>{{p.categoria.nome}}</td>
-              <td>
-                <button class="btn btn-sm btn-outline-primary">
-                  Editar
-                </button>
-                <button class="btn btn-sm btn-outline-danger ms-2">
-                  Excluir
-                </button>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="5">
-                Quantidade de produtos obtidos: {{produtos.length}}
-              </td>
-            </tr>
-          </tfoot>
 
-        </table>
 
-      </div>
 
     </div>
 
-  </div>
 
-</div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
